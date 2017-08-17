@@ -35,8 +35,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Fastway_Courier_Quote_v2">
-      <HintPath>..\..\Binaries\Courier_v2\Fastway_Courier_Quote_v2.dll</HintPath>
+    <Reference Include="Fastway_Courier_Quote_v1">
+      <HintPath>..\..\Binaries\Courier_v1\Fastway_Courier_Quote_v1.dll</HintPath>
     </Reference>
     <Reference Include="System" />
   </ItemGroup>
@@ -53,7 +53,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Fastway_Couriers_Test.cs" />
+    <Compile Include="Fastway_Couriers_Tests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Choose>
