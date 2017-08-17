@@ -6,7 +6,7 @@ using System.Collections.Generic;
 namespace Alex_Buckley_Assign_1
 {
     [TestClass]
-    public class GettingAParcelQuoteFromNelson_DestinationZone_Should
+    public class GettingAZoneFromNelson_ForAGivenDestination_Should
     {
         [TestMethod]
         public void ReturnBlue_WhenDestinationIsRiwaka()
@@ -107,19 +107,6 @@ namespace Alex_Buckley_Assign_1
             Assert.AreEqual("Orange", zone);
         }
 
-        [TestMethod]
-        public void ReturnOrange_WhenDestinationIsChristchurch()
-        {
-            //arrange
-            var PQ = new ParcelQuoteFromNelson();
-            var Destination = "Christchurch";
-
-            //act
-            var zone = PQ.GetDestinationZone(Destination);
-
-            //assert
-            Assert.AreEqual("Orange", zone);
-        }
 
         [TestMethod]
         [ExpectedException(typeof(KeyNotFoundException))]
@@ -138,7 +125,7 @@ namespace Alex_Buckley_Assign_1
     }
 
     [TestClass]
-    public class GettingAParcelQuoteFromNelson_QuoteAndTicket_Should
+    public class GettingAParcelAndTicketQuoteFromNelson_ToAGivenDestination_Should
     {
 
         //Pink zone
@@ -274,8 +261,9 @@ namespace Alex_Buckley_Assign_1
 
         //Blue zone
 
-        [ExpectedException(typeof(ArgumentOutOfRangeException))]
+        
         [TestMethod]
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
         public void ReturnArgumentException_WhenBlue0()
         {
             //arrange
@@ -501,6 +489,7 @@ namespace Alex_Buckley_Assign_1
             //assert
             Assert.AreEqual(1, QuoteResult.ExcessTickets);
             Assert.AreEqual(14.9M, QuoteResult.Price);
+            
         }
 
         [TestMethod]
@@ -633,6 +622,7 @@ namespace Alex_Buckley_Assign_1
             //assert
             Assert.AreEqual(1, QuoteResult.ExcessTickets);
             Assert.AreEqual(19.15M, QuoteResult.Price);
+            
         }
 
         [TestMethod]
@@ -649,6 +639,7 @@ namespace Alex_Buckley_Assign_1
             //assert
             Assert.AreEqual(2, QuoteResult.ExcessTickets);
             Assert.AreEqual(25.35M, QuoteResult.Price);
+            
         }
 
         [ExpectedException(typeof(ArgumentOutOfRangeException))]
